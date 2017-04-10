@@ -16,6 +16,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
+|🇧🇷 pt-BR|Brazilian Portuguese|[brunoalvesdefaria](https://github.com/brunoalvesdefaria)|
 |🇷🇺 ru|Russian  ||
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|

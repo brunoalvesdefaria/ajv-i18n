@@ -8,6 +8,7 @@ module.exports = {
     it: require('./it'),
     ja: require('./ja'),
     pl: require('./pl'),
+    'pt-BR': require('./pt-BR'),
     ru: require('./ru'),
     sv: require('./sv'),
     zh: require('./zh')

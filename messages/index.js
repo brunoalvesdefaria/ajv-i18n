@@ -2,7 +2,7 @@
 
 module.exports = {
   // supported locales
-  _locales: ['en', 'de', 'es', 'hu', 'it', 'ja', 'pl', 'ru', 'sv', 'zh'],
+  _locales: ['en', 'de', 'es', 'hu', 'it', 'ja', 'pl', 'pt-BR', 'ru', 'sv', 'zh'],
 
   // shared defines
   _defs: {
@@ -13,6 +13,7 @@ module.exports = {
       es: '{{? n!=1 }}s{{?}}', //only item (element)
       it: '{{? n==1 }}o{{??}}i{{?}}',
       pl: '{{? n==1 }}u{{??}}ów{{?}}',
+      'pt-BR': '{{? n!=1 }}s{{?}}',
       ru: '{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}',
       sv: '{{? n!=1 }}er{{?}}'
     },
@@ -23,6 +24,7 @@ module.exports = {
       hu: '{{? n!=1 }}i{{?}}',
       it: '{{? n==1 }}o{{??}}i{{?}}',
       pl: '{{? n==1 }}e{{??}}a{{?}}',
+      'pt-BR': '{{? n!=1 }}s{{?}}',
       ru: '{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}',
       sv: '{{? n!=1 }}er{{?}}'
     }
@@ -37,6 +39,7 @@ module.exports = {
     it: 'non può risolvere il riferimento {{=e.params.ref}}',
     ja: '{{=e.params.ref}}のスキーマを見つけることができない',
     pl: 'nie można znaleść schematu {{=e.params.ref}}',
+    'pt-BR': 'não foi possível resolver a referência {{=e.params.ref}}',
     ru: 'не найдена схема {{=e.params.ref}}',
     sv: 'kan inte lösa referens {{=e.params.ref}}',
     zh: '无法找到引用{{=e.params.ref}}'
@@ -49,6 +52,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}以上あってはいけない',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
+    'pt-BR': '{{#def.n}}não deve conter mais de {{=n}} elemento{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
     sv: '{{#def.n}}borde ha fler än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不允许超过{{=n}}个元素'
@@ -65,6 +69,7 @@ module.exports = {
     it: 'non dovrebbe avere attributi aggiuntive',
     ja: '追加してはいけない',
     pl: 'nie powinien zawierać dodatkowych pól',
+    'pt-BR': 'não deve conter propriedades adicionais',
     ru: 'не должно иметь дополнительные поля',
     sv: 'borde inte ha fler egenskaper',
     zh: '不允许有额外的属性'
@@ -81,6 +86,7 @@ module.exports = {
     it: 'deve corrispondere qualche schema in "anyOf"',
     ja: '"anyOf"のスキーマとマッチしなくてはいけない',
     pl: 'powinien pasować do wzoru z sekcji "anyOf"',
+    'pt-BR': 'deve corresponder a algum esquema em "anyOf"',
     ru: 'должно соответствовать одной их схем в "anyOf"',
     sv: 'borde matcha något schema i "anyOf"',
     zh: '数据应为 anyOf 所指定的其中一个'
@@ -100,6 +106,7 @@ module.exports = {
     it: '{{#def.n}}dovrebbe avere attribut{{#def.propPlural}} {{=e.params.deps}} quando attributo {{=e.params.property}} è presente',
     ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
+    'pt-BR': '{{#def.n}}deve conter a{{#def.mPlural}} propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} está presente',
     ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
     sv: '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
     zh: '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}'
@@ -116,6 +123,7 @@ module.exports = {
     it: 'dovrebbe essere pari ad uno dei valori predefiniti',
     ja: '事前に定義された値のいずれかに等しくなければいけない',
     pl: 'powinien być równy jednej z predefiniowanych wartości',
+    'pt-BR': 'deve ser igual a um dos valores predefinidos',
     ru: 'должно быть равен одному из значений в "enum"',
     sv: 'borde vara ekvivalent med en av dess fördefinierade värden',
     zh: '应当是预设定的枚举值之一'
@@ -132,6 +140,7 @@ module.exports = {
     it: 'deve corrispondere formato "{{=e.params.format}}"',
     ja: '"{{=e.params.format}}"形式に揃えなければいけない',
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
+    'pt-BR': 'deve corresponder ao formato "{{=e.params.format}}"',
     ru: 'должно соответствовать формату "{{=e.params.format}}"',
     sv: 'borde matcha formatet "{{=e.params.format}}"',
     zh: '应当匹配格式 "{{=e.params.format}}"'
@@ -151,6 +160,7 @@ module.exports = {
     it: '{{#def.c}}dovrebbe essere {{=cond}}',
     ja: '{{#def.c}}{{=cond}}でなければいけない',
     pl: '{{#def.c}}powinien być {{=cond}}',
+    'pt-BR': '{{#def.c}}deve ser {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
     sv: '{{#def.c}}borde vara {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}'
@@ -170,6 +180,7 @@ module.exports = {
     it: '{{#def.c}}dovrebbe essere {{=cond}}',
     ja: '{{#def.c}}{{=cond}}でなければいけない',
     pl: '{{#def.c}}powinien być {{=cond}}',
+    'pt-BR': '{{#def.c}}deve ser {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
     sv: '{{#def.c}}borde vara {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}'
@@ -192,6 +203,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}個以上であってはいけない',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
+    'pt-BR': '{{#def.n}}não deve conter mais de {{=n}} elemento{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte ha fler än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不应多于 {{=n}} 个项'
@@ -208,6 +220,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere meno di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下であってはいけない',
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
+    'pt-BR': '{{#def.n}}não deve conter menos de {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} элемент{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte ha färre än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不应少于 {{=n}} 个项'
@@ -224,6 +237,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以上であってはいけない',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
+    'pt-BR': '{{#def.n}}não deve conter mais de {{=n}} caractere{{#def.mPlural}}',
     ru: '{{#def.n}}должно быть не длиннее, чем {{=n}} символ{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte vara längre än {{=n}} tecken',
     zh: '{{#def.n}}不应多于 {{=n}} 个字符'
@@ -240,6 +254,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以下であってはいけない',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
+    'pt-BR': '{{#def.n}}não deve conter menos de {{=n}} caractere{{#def.mPlural}}',
     ru: '{{#def.n}}должно быть не короче, чем {{=n}} символ{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte vara kortare än {{=n}} tecken',
     zh: '{{#def.n}}不应少于 {{=n}} 个字符'
@@ -256,6 +271,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere più {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以上のプロパティを有してはいけない',
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
+    'pt-BR': '{{#def.n}}não deve conter mais de {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} пол{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}',
     zh: '{{#def.n}}不应有多于 {{=n}} 个属性'
@@ -272,6 +288,7 @@ module.exports = {
     it: '{{#def.n}}non dovrebbe avere meno {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下のプロパティを有してはいけない',
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
+    'pt-BR': '{{#def.n}}não deve conter menos de {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} пол{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}',
     zh: '{{#def.n}}不应有少于 {{=n}} 个属性'
@@ -288,6 +305,7 @@ module.exports = {
     it: 'dovrebbe essere un multiplo di {{=e.params.multipleOf}}',
     ja: '{{=e.params.multipleOf}}の倍数でなければいけない',
     pl: 'powinien być wielokrotnością {{=e.params.multipleOf}}',
+    'pt-BR': 'deve ser múltiplo de {{=e.params.multipleOf}}',
     ru: 'должно быть кратным {{=e.params.multipleOf}}',
     sv: 'borde vara en multipel av {{=e.params.multipleOf}}',
     zh: '应当是 {{=e.params.multipleOf}} 的整数倍'
@@ -304,6 +322,7 @@ module.exports = {
     it: 'non dovrebbe essere valida in base allo schema di "non"',
     ja: '"not"のスキーマに従って有効としてはいけない',
     pl: 'nie powinien pasować do wzoru z sekcji "not"',
+    'pt-BR': 'não deve ser válido conforme esquema em "not"',
     ru: 'должно не соответствовать схеме в "not"',
     sv: 'borde inte vara giltigt enligt schema i "not"',
     zh: '不应当匹配 "not" schema'
@@ -320,6 +339,7 @@ module.exports = {
     it: 'dovrebbe corrispondere esattamente uno schema in "oneOf"',
     ja: '"oneOf"のスキーマと完全に一致しなくてはいけない',
     pl: 'powinien pasować do jednego wzoru z sekcji "oneOf"',
+    'pt-BR': 'deve corresponder exatamente a um esquema em "oneOf"',
     ru: 'должно соответствовать в точности одной схемe в "oneOf"',
     sv: 'borde matcha exakt ett schema i "oneOf"',
     zh: '只能匹配一个 "oneOf" 中的 schema'
@@ -336,6 +356,7 @@ module.exports = {
     it: 'deve corrispondere al modello "{{=e.params.pattern}}"',
     ja: '"{{=e.params.pattern}}"のパターンと一致しなければいけない',
     pl: 'powinien zgadzać się ze wzorem "{{=e.params.pattern}}"',
+    'pt-BR': 'deve corresponder ao padrão "{{=e.params.pattern}}"',
     ru: 'должно соответствовать образцу "{{=e.params.pattern}}"',
     sv: 'borde matcha mönstret "{{=e.params.pattern}}"',
     zh: '应当匹配模式 "{{=e.params.pattern}}"'
@@ -352,6 +373,7 @@ module.exports = {
     it: 'dovrebbe avere attributo richiesta {{=e.params.missingProperty}}',
     ja: '必要なプロパティ{{=e.params.missingProperty}}がなければいけない',
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
+    'pt-BR': 'deve conter a propriedade obrigatória {{=e.params.missingProperty}}',
     ru: 'должно иметь обязательное поле {{=e.params.missingProperty}}',
     sv: 'borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}',
     zh: '应当有必需属性 {{=e.params.missingProperty}}'
@@ -368,6 +390,7 @@ module.exports = {
     it: 'dovrebbe essere {{=e.params.type}}',
     ja: '{{=e.params.type}}でなければいけない',
     pl: 'powinien być {{=e.params.type}}',
+    'pt-BR': 'deve ser {{=e.params.type}}',
     ru: 'должно быть {{=e.params.type}}',
     sv: 'borde vara {{=e.params.type}}',
     zh: '应当是 {{=e.params.type}} 类型'
@@ -384,6 +407,7 @@ module.exports = {
     it: 'non dovrebbe avere elementi duplicati (elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
     ja: '重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）',
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
+    'pt-BR': 'não deve conter itens duplicados (os itens {{=e.params.j}} e {{=e.params.i}} são idênticos)',
     ru: 'не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
     sv: 'borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)',
     zh: '不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)'
@@ -396,6 +420,7 @@ module.exports = {
     en: 'should pass "{{=e.keyword}}" keyword validation',
     es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"',
     pl: 'powinien przejść walidację "{{=e.keyword}}"',
+    'pt-BR': 'deve informar a validação da palavra chave "{{=e.keyword}}"',
     ru: 'должно соответствовать правилу "{{=e.keyword}}"',
     sv: 'bör passera "{{=e.keyword}}" nyckelord validering',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"'
@@ -404,6 +429,7 @@ module.exports = {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
     es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"',
     pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"',
+    'pt-BR': '{{#def.n}}deve conter {{=e.params.reason}} {{=n}} propriedade{{#def.propPlural}} correspondente{{#def.mPlural}} ao padrão "{{=e.params.pattern}}"',
     ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"',
     sv: '{{#def.n}}bör ha {{=e.params.reason}} {{=n}} egenskap{{#def.propPlural}} som matchar mönstret "{{=e.params.pattern}}"',
     zh: '{{#def.n}}应当有 {{=n}} 个 {{=e.params.reason}} 属性满足模式 {{=e.params.pattern}}'
@@ -412,6 +438,7 @@ module.exports = {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
+    'pt-BR': 'deve conter a propriedade correspondendo ao padrão "{{=e.params.missingPattern}}"',
     ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
     sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     zh: '应当有属性匹配模式 {{=e.params.missingPattern}}'
@@ -420,6 +447,7 @@ module.exports = {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
     es: 'debe pasar la validación \"switch\" de palabra clave, el caso {{=e.params.caseIndex}} falló',
     pl: 'powinien przejść walidacje pola \"switch\", przypadek {{=e.params.caseIndex}} zawiódł',
+    'pt-BR': 'deve informar a validação \"switch\" da palavra chave, caso {{=e.params.caseIndex}} falhe',
     ru: 'должно соответствовать правилу {{=e.params.caseIndex}} в "switch"',
     sv: 'bör passera \"switch\" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
     zh: '由于 {{=e.params.caseIndex}} 失败，未通过 "switch" 校验, '
@@ -428,6 +456,7 @@ module.exports = {
     en: 'should be equal to constant',
     es: 'debe ser igual a la constante',
     pl: 'powinien być równy stałej',
+    'pt-BR': 'deve ser igual à constante',
     ru: 'должно быть равно заданному значению',
     sv: 'bör vara en konstant',
     zh: '应当等于常量'
@@ -439,6 +468,7 @@ module.exports = {
     en: '{{#def.c}}should be {{=cond}}',
     es: '{{#def.c}}debe ser {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
+    'pt-BR': '{{#def.c}}deve ser {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
     sv: '{{#def.c}}bör vara {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}'
@@ -450,6 +480,7 @@ module.exports = {
     en: '{{#def.c}}should be {{=cond}}',
     es: '{{#def.c}}debe ser {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
+    'pt-BR': '{{#def.c}}deve ser {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
     sv: '{{#def.c}}bör vara {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}'
@@ -458,6 +489,7 @@ module.exports = {
     en: 'formatExclusiveMaximum should be boolean',
     es: 'formatExclusiveMaximum debe ser booleano',
     pl: 'formatExclusiveMaximum powinien być boolean',
+    'pt-BR': 'formatExclusiveMaximum deve ser booleano',
     ru: 'formatExclusiveMaximum должно быть boolean',
     sv: 'formatExclusiveMaximum bör vara en boolean',
     zh: 'formatExclusiveMaximum 应当是布尔值'
@@ -466,8 +498,9 @@ module.exports = {
     en: 'formatExclusiveMinimum should be boolean',
     es: 'formatExclusiveMinimum debe ser booleano',
     pl: 'formatExclusiveMinimum powinień być boolean',
+    'pt-BR': 'formatExclusiveMinimum deve ser booleano',
     ru: 'formatExclusiveMinimum должно быть boolean',
-    sv: 'formatExclusiveMaximum bör vara en boolean',
+    sv: 'formatExclusiveMinimum bör vara en boolean',
     zh: 'formatExclusiveMinimum 应当是布尔值'
   }
 };
